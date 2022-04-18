@@ -68,7 +68,7 @@ Line 9: `int numPixels = 15;`
 
 ### Set the Wifi Credentials
 Line 15-21: 
-```python
+```c
 // Wifi Credentials
 const char* ssidTab = {
   "<ssid>"
@@ -84,7 +84,7 @@ Line 27:  `WiFiServer server(80);`
 ### modify the blinking effects
 #### Lightning 1
 Line 70: 
-```python
+```c
 void LightningFlash1(uint8_t wait, uint8_t times)
     {
         if (wait == 0)
@@ -105,7 +105,7 @@ void LightningFlash1(uint8_t wait, uint8_t times)
 ```
 #### Lightning 2
 Line 89:
-```python
+```c
 void LightningFlash2(uint8_t wait, uint8_t times)
     {
       allOff();
@@ -131,7 +131,7 @@ void LightningFlash2(uint8_t wait, uint8_t times)
     
 #### Lightning 3
 Line 112
-```python
+```c
 void LightningFlash3(uint8_t wait, uint8_t times)
     {
       allOff();
@@ -173,7 +173,7 @@ void rainbow(int wait) {
 
 #### turn off
 Line: 148
-```python
+```c
 void allOff() 
     {
         for(uint16_t i=0; i<strip.numPixels(); i++) 
@@ -188,7 +188,7 @@ void allOff()
 If you want to rename on which `GET` requests the web server should response, you find it on Line 220 - 239.
 Just change `"GET /X"` to the value you want to use.
 
-```python
+```c
               if (header.indexOf("GET /0") >= 0) {
                 firstPixelHue = 65536;
                 modeLED = 0;
