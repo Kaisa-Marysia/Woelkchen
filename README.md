@@ -13,11 +13,14 @@
       * [Rainbow effect](#rainbow-effect)
       * [turn off](#turn-off)
       * [URLs for the GET requests](#urls-for-the-get-requests)
+  * [Demo Videos](#demo-videos)
 
 
 # Woelkchen
 Woelkchen is a small handicraft project with a **ESP32** and **WS2812** LEDs in a case that looks like a cloud.
 The **ESP32** also run a simple web server to control the light effects of Woelkchen, by sending GET Requests. 
+
+<img src="https://github.com/Kaisa-Marysia/Woelkchen/blob/main/img/Woelckchen.jpg" width="640" />
 
 ## What you need
 For these projects you need:
@@ -37,14 +40,26 @@ Setup the Arduino IDE, so you can work with the ESP32. Also, you must have the l
 ## What to do
 If you want to use a staff for the LEDs, you must glue the LEDs on it and solder the connections between the single LEDs. You can also put the **WS2812** strip into the bottle and hope it looks good. 
 
+<img src="https://github.com/Kaisa-Marysia/Woelkchen/blob/main/img/01.jpg" width="640" />
+
+
 The data connection from the **ESP32** to the **WS28212** is on `GPIO Pin #5`. You can change it in the code (Line 6: `int neoPixelPin = 5;`).
 For the 5V Output from the **ESP32** connect the `GPIO PIN 5V` with the `5V Connection` on the **WS2812** and the `GPIO GND Pin` with the `WS2812 GND Connection`. 
+
+<img src="https://github.com/Kaisa-Marysia/Woelkchen/blob/main/img/02.jpg" width="640" />
+<img src="https://github.com/Kaisa-Marysia/Woelkchen/blob/main/img/02b.jpg" width="640" />
+
 
 Cut a hole into the bottle, so you can connect the **ESP32** with a USB cable. I did it in the center of the bottle, so it would be in balance if I hang the cloud on the cable to the roof. 
 
 Glue the stick on the lid of the bottle, so you can use it for maintenance and pull it out without problems.
 
+<img src="https://github.com/Kaisa-Marysia/Woelkchen/blob/main/img/Screenshot-1.jpg" width="640" />
+<img src="https://github.com/Kaisa-Marysia/Woelkchen/blob/main/img/Screenshot-2.jpg" width="640" />
+
 Start the **Arduino IDE** Software and open the code from this repository. Set your Wifi Credentials on Line 15-21, verify/compile the code and if all is okay, upload the code to the **ESP32**. Press the Reset button on the ESP. Check the code by sending a `GET` request to the **ESP32** by browsing to `http://<cloud IPv4>/1` or send it via cURL. If the LEDs starts to light, all is working fine.
+
+<img src="https://github.com/Kaisa-Marysia/Woelkchen/blob/main/img/03.jpg" width="640" />
 
 Now you just need to glue the filler cotton in the bottle and lid (separate).
 
@@ -212,6 +227,16 @@ Just change `"GET /X"` to the value you want to use.
               
 ```
 
+## Demo Videos
 
-    
-﻿
+https://user-images.githubusercontent.com/65874443/163884296-5343fb85-0000-4dab-8c0e-b4f2c758efc6.mp4
+
+https://user-images.githubusercontent.com/65874443/163884482-a4bfc0ee-ca60-468c-9488-9df8424a2873.mp4
+
+https://user-images.githubusercontent.com/65874443/163884488-02f549ef-98d3-4bf4-8d75-7fc16509cea9.mp4
+
+https://user-images.githubusercontent.com/65874443/163884496-37bbb560-ba58-414a-8b79-4eb24bfc0b34.mp4
+
+https://user-images.githubusercontent.com/65874443/163884500-183b24e7-ff77-42ab-a1e2-1302e1bec0c0.mp4
+
+https://user-images.githubusercontent.com/65874443/163884758-032e8a63-ac1e-4725-8494-2dde340cf7d3.mp4
