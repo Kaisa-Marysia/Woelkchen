@@ -1,4 +1,4 @@
-* [Woelckchen](#woelckchen)
+* [Woelkchen](#woelkchen)
   * [What You need](#what-you-need)
   * [What to do](#what-to-do)
   * [Functions](#functions)
@@ -15,7 +15,7 @@
       * [URLs for the GET requests](#urls-for-the-get-requests)
 
 
-# Woelckchen
+# Woelkchen
 Woelkchen is a small handicraft project with a **ESP32** and **WS2812** LEDs in a case that looks like a cloud.
 The **ESP32** also run a simple web server to control the light effects of Woelkchen, by sending GET Requests. 
 
