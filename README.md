@@ -1,19 +1,36 @@
+* [Woelckchen](#woelckchen)
+  * [What You need](#what-you-need)
+  * [What to do](#what-to-do)
+  * [Functions](#functions)
+  * [How to modify the code?](#how-to-modify-the-code?)
+    * [Set the GPIO Data output](#set-the-gpio-data-output)
+    * [Set the numbers of LEDs](#set-the-numbers-of-leds)
+    * [Set the Wifi Credentials](#set-thewifi-credentials)
+    * [modify the blinking effects](#modify-the-blinking-effects)
+      * [Lightning 1](#lightning-1)
+      * [Lightning 2](#lightning-2)
+      * [Lightning 3](#lightning-3)
+      * [Rainbow effect](#rainbow-effect)
+      * [turn off](#turn-off)
+      * [URLs for the GET requests](#urls-for-the-get-requests)
+
+
 # Woelckchen
 Woelkchen is a small handicraft project with a **ESP32** and **WS2812** LEDs in a case that looks like a cloud.
-The **ESP32** also run a simple webserver to control the light effects of Woelkchen, by sending GET Requests. 
+The **ESP32** also run a simple web server to control the light effects of Woelkchen, by sending GET Requests. 
 
 ## What you need
-For this projects you need:
+For these projects you need:
   * A ESP32
   * A ws2812 strip with 15 LEDs
-  * *(optional)* A piece of wood to glue the LEDs on. (Should have a smaler sizeas the bittleneck) 
+  * *(optional)* A piece of wood to glue the LEDs on. (Should have a smaller size the bottleneck) 
   * A PET bottle where a ESP32 should pass trough
   * filler cotton
   * Glue
   * Jumper Cable
   
-Also you need a computer, usb cable and the Arduino IDE software. 
-Setup the Arduino IDE, so you can work with the ESP32. Also you must have the libaries installed.
+Also, you need a computer, USB cable and the Arduino IDE software. 
+Setup the Arduino IDE, so you can work with the ESP32. Also, you must have the libraries installed.
   * ESPAsync_WiFiManager
   * AdaFruit NeoPixel
 
@@ -23,13 +40,13 @@ If you want to use a staff for the LEDs, you must glue the LEDs on it and solder
 The data connection from the **ESP32** to the **WS28212** is on `GPIO Pin #5`. You can change it in the code (Line 6: `int neoPixelPin = 5;`).
 For the 5V Output from the **ESP32** connect the `GPIO PIN 5V` with the `5V Connection` on the **WS2812** and the `GPIO GND Pin` with the `WS2812 GND Connection`. 
 
-Cut a hole into the the bottle, so you can connect the **ESP32** with a usb cable. I did it in the center of the bottle, so it would be in balance if I hang the cloud on the cable to the roof. 
+Cut a hole into the bottle, so you can connect the **ESP32** with a USB cable. I did it in the center of the bottle, so it would be in balance if I hang the cloud on the cable to the roof. 
 
-Glue the the stick on the lid of the bottle, so you can pull it out without problems.
+Glue the stick on the lid of the bottle, so you can use it for maintenance and pull it out without problems.
 
 Start the **Arduino IDE** Software and open the code from this repository. Set your Wifi Credentials on Line 15-21, verify/compile the code and if all is okay, upload the code to the **ESP32**. Press the Reset button on the ESP. Check the code by sending a `GET` request to the **ESP32** by browsing to `http://<cloud IPv4>/1` or send it via cURL. If the LEDs starts to light, all is working fine.
 
-Now you just need to glue the filler cotton in the bottle and lid (seperate).
+Now you just need to glue the filler cotton in the bottle and lid (separate).
 
 ## Functions
 You can change the blinking mode by sending `GET` Requests.
@@ -41,7 +58,7 @@ You can change the blinking mode by sending `GET` Requests.
   * `http://<cloud-IPv4>/4` rainbow lights
 
 ## How to modify the code?
-The code is commented so you can see what code part is doing. But incase..
+The code is commented so you can see what code part is doing. But in case..
 
 ### Set the GPIO Data output
 Line 6: `int neoPixelPin = 5;`
@@ -61,7 +78,7 @@ const char* passwordTab = {
 };
 ```
 
-### Set the webserver port listing on
+### Set the web server port listing on
 Line 27:  `WiFiServer server(80);`
 
 ### modify the blinking effects
@@ -167,8 +184,8 @@ void allOff()
     }
 ```
 
-#### URLs for the GET requests
-If you want to rename on which `GET` requests the webserver should repsons, you find it on Line 220 - 239.
+### URLs for the GET requests
+If you want to rename on which `GET` requests the web server should response, you find it on Line 220 - 239.
 Just change `"GET /X"` to the value you want to use.
 
 ```python
@@ -197,3 +214,4 @@ Just change `"GET /X"` to the value you want to use.
 
 
     
+﻿
